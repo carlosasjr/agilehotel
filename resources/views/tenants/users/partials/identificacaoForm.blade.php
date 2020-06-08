@@ -31,11 +31,6 @@
 @endif
 
 
-<div class="form-group">
-    {!! Form::label('type', 'Tipo', ['class' => 'control-label']); !!}
-    {!! Form::select('type', ['A' => 'Advogado', 'U' => 'Usuário'] ,  null, ['class' => 'form-control', 'placeholder' => ' ', 'id' => 'type']) !!}
-</div>
-
 <div class="row">
     <div class="col-12 col-sm-4">
         <div class="form-group label-float">

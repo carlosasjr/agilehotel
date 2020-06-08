@@ -3,23 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Contracts\CountryRepositoryInterface;
-use App\Repositories\Contracts\TypeActionRepositoryInterface;
+use App\Repositories\Contracts\TypeAddressRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use Illuminate\Http\Request;
 
 
 class UserController extends ControllerStandard
 {
-    private $typeAction;
     private $country;
+    private $typeAddress;
 
     public function __construct(UserRepositoryInterface $user,
-                                TypeActionRepositoryInterface $typeAction,
+                                TypeAddressRepositoryInterface $typeAddress,
                                 CountryRepositoryInterface $country)
     {
         $this->model = $user;
-        $this->typeAction = $typeAction;
         $this->country = $country;
+        $this->typeAddress = $typeAddress;
 
         $this->title = 'Usuario';
         $this->view = 'tenants.users';
@@ -43,7 +43,7 @@ class UserController extends ControllerStandard
     {
         $title = "Cadastrar {$this->title}";
 
-        $type_addresses = $this->typeAction->get();
+        $type_addresses = $this->typeAddress->get();
         $countries = $this->country->get();
 
         return view("{$this->view}.create", compact('title', 'type_addresses', 'countries'));
@@ -62,7 +62,7 @@ class UserController extends ControllerStandard
 
         $title = "Editar {$this->title}: {$data->name}";
 
-        $type_addresses = $this->typeAction->get();
+        $type_addresses = $this->typeAddress->get();
         $countries = $this->country->get();
         $contacts = $data->contacts;
         $addresses = $data->addresses;

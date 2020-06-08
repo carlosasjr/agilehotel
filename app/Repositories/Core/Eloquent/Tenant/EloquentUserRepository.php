@@ -205,11 +205,4 @@ class EloquentUserRepository extends BaseEloquentRepository
 
         return $this->model->rules();
     }
-
-    public function getAdvogados()
-    {
-        return $this->model->Advogados()
-                           ->get()
-                           ->pluck('name', 'id');
-    }
 }

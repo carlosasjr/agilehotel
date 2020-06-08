@@ -23,11 +23,13 @@ class PlanController extends Controller
      */
     public function index()
     {
+
         if (request()->ajax()) {
             return $this->repository->dataTables('action', 'tenants.plans.partials.acoes');
         }
 
         return view('tenants.plans.index');
+
     }
 
     /**

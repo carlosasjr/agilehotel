@@ -35,7 +35,6 @@ class User extends Authenticatable
         'salary',
         'date_admission',
         'date_resignation',
-        'type',
         'partner',
         'marital_status',
         'father',
@@ -80,7 +79,6 @@ class User extends Authenticatable
             'image'     => 'image',
             'cpf'       => 'nullable|cpf|required_if:type,U',
             'password'  => 'required|min:3|max:20|confirmed',
-            'type'      => 'required|in:A,U',
             'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
             'oab'       => 'required_if:type,A',
         ];
@@ -94,7 +92,6 @@ class User extends Authenticatable
             'email'     => "required|min:3|max:100|email|unique:users,email,{$id},id",
             'image'     => 'image',
             'cpf'       => 'nullable|cpf|required_if:type,U',
-            'type'      => 'required|in:A,U',
             'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
             'oab'       => 'required_if:type,A',
         ];
