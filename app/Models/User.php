@@ -28,8 +28,6 @@ class User extends Authenticatable
         'cnpj',
         'rg',
         'date_birth',
-        'ctps',
-        'oab',
         'cellphone',
         'telephone',
         'salary',
@@ -80,7 +78,6 @@ class User extends Authenticatable
             'cpf'       => 'nullable|cpf|required_if:type,U',
             'password'  => 'required|min:3|max:20|confirmed',
             'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
-            'oab'       => 'required_if:type,A',
         ];
     }
 
@@ -93,7 +90,6 @@ class User extends Authenticatable
             'image'     => 'image',
             'cpf'       => 'nullable|cpf|required_if:type,U',
             'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
-            'oab'       => 'required_if:type,A',
         ];
     }
 

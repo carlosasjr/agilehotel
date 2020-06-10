@@ -12,9 +12,18 @@ class TenantsUserTableSeeder extends Seeder
     private $user;
     private $profile;
 
+    private $admin;
+    private $profileAdmin;
+
     private function createProfile()
     {
         $this->profile = Profile::create([
+            'name'  => 'Suporte',
+            'label' => 'Suporte'
+        ]);
+
+
+        $this->profileAdmin = Profile::create([
             'name'  => 'Admin',
             'label' => 'Administrador'
         ]);
@@ -25,9 +34,10 @@ class TenantsUserTableSeeder extends Seeder
         $this->user = User::create([
             'name'      => 'Suporte',
             'fantasy'   => 'Suporte',
-            'email'     => 'suporte@theplace.com.br',
+            'email'     => 'suporte@agille.com.br',
             'password'  => bcrypt('pl4c32k')
         ]);
+
     }
 
     private function createPermissions()
@@ -37,11 +47,28 @@ class TenantsUserTableSeeder extends Seeder
     }
 
 
+    private function createPermissionsProfile()
+    {
+        $path =  storage_path('app/public/files_sql/permission_profile.sql');
+        DB::unprepared(file_get_contents($path));
+    }
+
+
+
+    private function createProfileUser()
+    {
+        $path =  storage_path('app/public/files_sql/profile_user.sql');
+        DB::unprepared(file_get_contents($path));
+    }
+
+
+
+
     private function sync()
     {
-        $admin = $this->user->where('name', 'Suporte')->first();
+        $suporte = $this->user->where('name', 'Suporte')->first();
 
-        $admin->profiles()->save($this->profile);
+        $suporte->profiles()->save($this->profile);
     }
 
 
@@ -67,6 +94,8 @@ class TenantsUserTableSeeder extends Seeder
         $this->sync();
 
         $this->createPermissions();
+        $this->createPermissionsProfile();
+        $this->createProfileUser();
 
         // Habilitas as FKs
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');

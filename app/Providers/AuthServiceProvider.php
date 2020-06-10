@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
     {
       // $this->registerPolicies();
 
-        $permissions = Permission::all();
+       $permissions = Permission::all();
 
         foreach ($permissions as $permission) {
             Gate::define($permission->name , function (User $user) use ($permission) {
@@ -36,7 +36,7 @@ class AuthServiceProvider extends ServiceProvider
             });
         }
 
-        Gate::define('companies', function (User $user) {
+       Gate::define('companies', function (User $user) {
             $permission = Permission::where('name', 'companies')->first();
             return (Helper::domainIsMain()) && ($user->hasPermission($permission));
         });
@@ -49,7 +49,7 @@ class AuthServiceProvider extends ServiceProvider
 
 
         Gate::before(function (User $user, $ability) {
-            if ($user->hasProfile('Admin') &&  Helper::domainIsMain())  {
+            if ($user->hasProfile('Suporte'))  {
                 return true;
             }
         });

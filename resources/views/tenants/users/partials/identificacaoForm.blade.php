@@ -57,23 +57,6 @@
 <div class="row">
     <div class="col-12 col-sm-6">
         <div class="form-group label-float">
-            {!! Form::text('oab', null, ['class' => 'form-control', 'placeholder' => ' ', 'id' => 'oab']) !!}
-            {!! Form::label('oab', 'OAB', ['class' => 'control-label']); !!}
-        </div>
-    </div>
-
-    <div class="col-12 col-sm-6">
-        <div class="form-group label-float">
-            {!! Form::text('ctps', null, ['class' => 'form-control', 'placeholder' => ' ', 'id' => 'ctps']) !!}
-            {!! Form::label('ctps', 'CTPS', ['class' => 'control-label']); !!}
-        </div>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-12 col-sm-6">
-        <div class="form-group label-float">
             {!! Form::text('cellphone', null, ['class' => 'form-control', 'placeholder' => ' ', 'id' => 'cellphone']) !!}
             {!! Form::label('cellphone', 'Celular', ['class' => 'control-label']); !!}           </div>
     </div>

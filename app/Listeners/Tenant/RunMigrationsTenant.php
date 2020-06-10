@@ -46,6 +46,7 @@ class RunMigrationsTenant
                 'password' => bcrypt($senha)
             ]);
 
+
             Mail::to($company->email)->send(new SendMailCompany($company, $senha));
         }
 

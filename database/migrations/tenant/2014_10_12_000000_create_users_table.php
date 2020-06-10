@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('image')->nullable();
-            $table->enum('type', ['A', 'U'])->default('A')->comment('A -> Advogado, U -> Usuário');
 
             $table->string('cpf')->nullable();
             $table->string('cnpj')->nullable();

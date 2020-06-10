@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SoftPro - Advogados')
+@section('title', 'Agille - Hotel')
 
 @section('content_header')
     <h1>Dashboard</h1>
