@@ -77,6 +77,11 @@ class Person extends Model
         return $this->belongsTo(Origin::class);
     }
 
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
     public function scopeStateActive($query)
     {
         return $query->where('status', '=', 'A');

@@ -1,0 +1,155 @@
+[09-06-2020 20:59:33] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 20:59:34] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 20:59:34] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 20:59:36] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 20:59:36] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-2GX65192DY937121NTODGLUA
+[09-06-2020 20:59:37] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 20:59:37] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-2GX65192DY937121NTODGLUA
+[09-06-2020 20:59:38] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 20:59:38] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-2GX65192DY937121NTODGLUA. {"name":"VALIDATION_ERROR","debug_id":"ba9188ba0ceb5","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:02:12] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:02:13] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:02:13] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:02:14] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:02:14] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-8VB75758TV467124WTOEM75I
+[09-06-2020 21:02:15] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:02:15] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-8VB75758TV467124WTOEM75I
+[09-06-2020 21:02:16] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:02:16] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-8VB75758TV467124WTOEM75I. {"name":"VALIDATION_ERROR","debug_id":"62977bb84d3b1","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:08:10] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:08:11] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:08:11] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:08:13] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:08:13] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-25F73001VH237404YTOHETHI
+[09-06-2020 21:08:14] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:08:14] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-25F73001VH237404YTOHETHI
+[09-06-2020 21:08:15] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:08:15] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-25F73001VH237404YTOHETHI. {"name":"VALIDATION_ERROR","debug_id":"4dab71364b386","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:10:29] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:10:30] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:10:30] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:10:31] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:10:31] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-9C234380XS592391GTOIGLBY
+[09-06-2020 21:10:32] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:10:32] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-9C234380XS592391GTOIGLBY
+[09-06-2020 21:10:33] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:10:33] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-9C234380XS592391GTOIGLBY. {"name":"VALIDATION_ERROR","debug_id":"329b34dd3ad4e","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:11:37] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:11:38] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:11:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:11:39] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:11:39] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-0BP68016LE768315NTOIXCEQ
+[09-06-2020 21:11:41] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:11:41] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-0BP68016LE768315NTOIXCEQ
+[09-06-2020 21:11:43] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:11:43] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-0BP68016LE768315NTOIXCEQ. {"name":"VALIDATION_ERROR","debug_id":"4bdc39987326c","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:11:51] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:11:52] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:11:52] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:11:53] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:11:53] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-18V66080R15799347TOI2MKA
+[09-06-2020 21:11:54] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:11:54] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-18V66080R15799347TOI2MKA
+[09-06-2020 21:11:56] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:11:56] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-18V66080R15799347TOI2MKA. {"name":"VALIDATION_ERROR","debug_id":"fac9854dbc8e3","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:13:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:13:39] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:13:39] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:13:40] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:13:40] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-35293963E2188221TTOJUR3Y
+[09-06-2020 21:13:41] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:13:41] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-35293963E2188221TTOJUR3Y
+[09-06-2020 21:13:43] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:13:43] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-35293963E2188221TTOJUR3Y. {"name":"VALIDATION_ERROR","debug_id":"2643ba5f7e587","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:14:04] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:14:05] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:14:05] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:14:06] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:14:06] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7V274532U1980862ATOJ24QI
+[09-06-2020 21:14:07] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:14:07] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7V274532U1980862ATOJ24QI
+[09-06-2020 21:14:08] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:14:08] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7V274532U1980862ATOJ24QI. {"name":"VALIDATION_ERROR","debug_id":"39485e265fa18","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:15:55] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:15:56] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:15:56] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:15:57] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:15:57] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-4W002037RN979992CTOKV7DI
+[09-06-2020 21:15:58] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:15:58] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-4W002037RN979992CTOKV7DI
+[09-06-2020 21:15:59] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[09-06-2020 21:15:59] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/billing-plans/P-4W002037RN979992CTOKV7DI. {"name":"VALIDATION_ERROR","debug_id":"e5ae0377e520d","message":"Invalid request. See details.","information_link":"https://developer.paypal.com/docs/api/payments.billing-plans#errors","details":[{"field":"payment_definitions[0].frequency_interval","issue":"frequency more than year is not supported."}]}
+[09-06-2020 21:18:23] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:18:24] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:18:24] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[09-06-2020 21:18:25] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:18:25] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-0B250550PW978381KTOL2DCQ
+[09-06-2020 21:18:26] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:18:26] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-0B250550PW978381KTOL2DCQ
+[09-06-2020 21:18:27] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:18:27] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-0B250550PW978381KTOL2DCQ
+[09-06-2020 21:18:28] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:22:04] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:22:06] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:22:06] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[09-06-2020 21:22:07] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[09-06-2020 21:23:10] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[09-06-2020 21:23:12] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[09-06-2020 21:23:12] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/EC-0H861528P5826642M/agreement-execute
+[09-06-2020 21:23:16] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:17:20] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[10-06-2020 17:17:22] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:17:22] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[10-06-2020 17:17:23] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[10-06-2020 17:17:23] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-5CT46669GS079651NT7QVFQY
+[10-06-2020 17:17:24] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:17:24] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-5CT46669GS079651NT7QVFQY
+[10-06-2020 17:17:25] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:17:26] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-5CT46669GS079651NT7QVFQY
+[10-06-2020 17:17:27] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:22:51] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[10-06-2020 17:22:52] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:22:52] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[10-06-2020 17:22:54] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[10-06-2020 17:23:48] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[10-06-2020 17:23:49] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 17:23:49] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/EC-1JH401488N3641533/agreement-execute
+[10-06-2020 17:23:53] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:16:01] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[10-06-2020 20:16:02] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:16:02] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-plans/
+[10-06-2020 20:16:03] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[10-06-2020 20:16:03] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7NB417609N2995709UCCOK7Q
+[10-06-2020 20:16:04] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:16:04] PayPal\Core\PayPalHttpConnection : INFO: PATCH https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7NB417609N2995709UCCOK7Q
+[10-06-2020 20:16:06] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:16:06] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7NB417609N2995709UCCOK7Q
+[10-06-2020 20:16:08] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:20:47] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[10-06-2020 20:20:48] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:20:48] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[10-06-2020 20:20:50] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[10-06-2020 20:21:29] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[10-06-2020 20:21:30] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[10-06-2020 20:21:30] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/EC-8C617660LT124911H/agreement-execute
+[10-06-2020 20:21:34] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[15-06-2020 21:41:35] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-06-2020 21:41:38] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[15-06-2020 21:41:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[15-06-2020 21:41:46] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[15-06-2020 21:44:18] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-06-2020 21:44:22] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[15-06-2020 21:44:22] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[15-06-2020 21:44:26] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[15-06-2020 21:45:37] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-06-2020 21:45:38] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[15-06-2020 21:45:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[15-06-2020 21:45:42] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[15-06-2020 21:53:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-06-2020 21:53:39] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[15-06-2020 21:53:39] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[15-06-2020 21:53:42] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[15-06-2020 22:09:47] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-06-2020 22:09:49] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[15-06-2020 22:09:49] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/billing-agreements/
+[15-06-2020 22:09:52] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201

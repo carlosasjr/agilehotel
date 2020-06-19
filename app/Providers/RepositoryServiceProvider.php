@@ -8,21 +8,20 @@ use App\Repositories\Contracts\CityRepositoryInterface;
 use App\Repositories\Contracts\CompanyRepositoryInterface;
 use App\Repositories\Contracts\ContactRepositoryInterface;
 use App\Repositories\Contracts\CountryRepositoryInterface;
-use App\Repositories\Contracts\DistrictRepositoryInterface;
-use App\Repositories\Contracts\ForumRepositoryInterface;
-use App\Repositories\Contracts\GroupActionRepositoryInterface;
+
 use App\Repositories\Contracts\OriginRepositoryInterface;
 use App\Repositories\Contracts\PermissionRepositoryInterface;
 use App\Repositories\Contracts\PersonRepositoryInterface;
-use App\Repositories\Contracts\PhaseRepositoryInterface;
+
 use App\Repositories\Contracts\PlanRepositoryInterface;
-use App\Repositories\Contracts\ProcessRepositoryInterface;
+
 use App\Repositories\Contracts\ProfileRepositoryInterface;
-use App\Repositories\Contracts\StageRepositoryInterface;
+
+use App\Repositories\Contracts\ReservationRepositoryInterface;
 use App\Repositories\Contracts\StateRepositoryInterface;
-use App\Repositories\Contracts\StickRepositoryInterface;
+
 use App\Repositories\Contracts\SubscriptionRepositoryInterface;
-use App\Repositories\Contracts\TypeActionRepositoryInterface;
+
 use App\Repositories\Contracts\TypeAddressRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
 
@@ -34,20 +33,15 @@ use App\Repositories\Core\Eloquent\Tenant\EloquentCityRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentCompanyRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentContactRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentCountryRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentDistrictRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentForumRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentGroupActionRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentOriginRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentPermissionRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentPersonRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentPhaseRepository;
+
 use App\Repositories\Core\Eloquent\Tenant\EloquentPlanRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentProcessRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentProfileRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentStageRepository;
+use App\Repositories\Core\Eloquent\Tenant\EloquentReservationRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentStateRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentStickRepository;
-use App\Repositories\Core\Eloquent\Tenant\EloquentTypeActionRepository;
+
 use App\Repositories\Core\Eloquent\Tenant\EloquentTypeAddressRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentUserRepository;
 use Illuminate\Support\ServiceProvider;
@@ -146,6 +140,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ContactRepositoryInterface::class,
             EloquentContactRepository::class
+        );
+
+        $this->app->bind(
+            ReservationRepositoryInterface::class,
+            EloquentReservationRepository::class
         );
 
     }

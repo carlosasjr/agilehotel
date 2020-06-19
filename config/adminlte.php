@@ -203,7 +203,13 @@ return [
                     'can' => 'people'
                 ],
 
-
+                [
+                    'text' => 'Reservas',
+                    'url' => 'reservations',
+                    'icon' => 'fas fa-id-card',
+                    'label_color' => 'success',
+                    'can' => 'reservations'
+                ],
             ],
         ],
 
