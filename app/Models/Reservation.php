@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Helpers\Helper;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
@@ -20,8 +21,18 @@ class Reservation extends Model
 
 
     protected $casts = [
-          'canceled_at' => 'datetime'
+          'canceled_at' => 'datetime',
     ];
+
+
+    public function rules($id)
+    {
+        return [
+            'person_id' => 'required',
+            'begin' => 'required',
+            'end' => 'required'
+        ];
+    }
 
 
     public function person()

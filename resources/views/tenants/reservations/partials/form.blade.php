@@ -1,8 +1,4 @@
-@if( isset($data) )
-    {!! Form::model($data, ['route' => ['reservations.update', $data->id], 'class' => 'form', 'method' => 'put', 'id' => 'formRegister', 'files' => true ]) !!}
-@else
-    {!! Form::open(['route' => 'reservations.store', 'class' => 'form', 'id' => 'formRegister', 'files' => true]) !!}
-@endif
+
 
 {!! Form::label('person_id', 'Hospede', ['class' => 'control-label']); !!}
 <div class="form-group">
@@ -12,25 +8,20 @@
 
 <div class="row">
     <div class="col-12 col-sm-6">
-        <div class="form-group label-float">
-            {!! Form::text('begin', null, ['class' => 'form-control',  'id' => 'begin', 'placeholder' => '']) !!}
+        <div class="form-group">
             {!! Form::label('begin', 'Data Início', ['class' => 'control-label']); !!}
+            <input type="datetime-local" class="form-control" name="begin" id="begin"  value="{{ old('begin', \App\Helpers\Helper::formatDateTime(strtotime(@$data->begin), 'Y-m-d\TH:i:s')) }}" >
         </div>
+
     </div>
 
 
     <div class="col-12 col-sm-6">
-        <div class="form-group label-float">
-            {!! Form::text('end', null, ['class' => 'form-control',  'id' => 'end', 'placeholder' => '']) !!}
+        <div class="form-group">
             {!! Form::label('end', 'Data Fim', ['class' => 'control-label']); !!}
+            <input type="datetime-local" class="form-control" name="end" id="end"  value="{{ old('end', \App\Helpers\Helper::formatDateTime(strtotime(@$data->end), 'Y-m-d\TH:i:s')) }}" >
         </div>
     </div>
 </div>
-
-
-
-{!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
-{!! Form::close() !!}
-
 <br/>
 

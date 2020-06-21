@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Contracts\ReservationRepositoryInterface;
+use Illuminate\Http\Request;
 
 class ReservationController extends ControllerStandard
 {
@@ -19,6 +20,18 @@ class ReservationController extends ControllerStandard
         $this->middleware('can:update_reservation')->only(['edit', 'update']);
         $this->middleware('can:view_reservation')->only(['show']);
         $this->middleware('can:delete_reservation')->only(['delete']);
+    }
+
+
+    private function getRooms(array $rooms)
+    {
+        $arr = [];
+
+        foreach ($rooms as $room) {
+            $arr[] = $room['room_id'];
+        }
+
+        return $arr;
     }
 
     public function create()
@@ -44,6 +57,71 @@ class ReservationController extends ControllerStandard
     }
 
 
+    public function store(Request $request)
+    {
+        $this->validate($request, $this->model->rules());
+
+        $dataForm = $request->all();
+
+
+        if (!isset($dataForm['rooms'])) {
+            return redirect()->back()
+                ->with('error', 'Não é permitido salvar uma reserva sem Apartamentos')
+                ->withInput();
+        }
+
+        $arr = $this->getRooms($dataForm['rooms']);
+
+        $reservation = $this->model->create($dataForm);
+
+        if (!$reservation) {
+            return redirect()->back()
+                ->with('error', 'Falha ao cadastrar a Reserva')
+                ->withInput();
+        }
+
+        $reservation->rooms()->attach($arr);
+
+
+        return redirect()->route("{$this->route}.index")
+            ->with('success', 'Registro realizado com sucesso!');
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, $this->model->rules());
+
+        $dataForm = $request->all();
+
+        if (!isset($dataForm['rooms'])) {
+            return redirect()->back()
+                ->with('error', 'Não é permitido salvar uma reserva sem Apartamentos')
+                ->withInput();
+        }
+
+        $arr = $this->getRooms($dataForm['rooms']);
+
+
+        $reservation = $this->model->find($id);
+
+        $update = $reservation->update($dataForm);
+
+        if (!$update) {
+            return redirect()->back()
+                ->with('error', 'Falha ao atualizar a Reserva')
+                ->withInput();
+        }
+
+        $reservation->rooms()->sync($arr);
+
+
+        return redirect()->route("{$this->route}.index")
+            ->with('success', 'Registro atualizado com sucesso!');
+    }
+
+
+
 
     public function showReservation($id, $action)
     {
@@ -60,7 +138,7 @@ class ReservationController extends ControllerStandard
         return  $data->update($dataForm);
     }
 
-    public function Checkin($id)
+    public function checkin($id)
     {
         $dataForm = [];
         $dataForm['checkin'] = now();
@@ -78,7 +156,7 @@ class ReservationController extends ControllerStandard
             ->with('success', 'Check-In realizado com sucesso!');
     }
 
-    public function Checkout($id)
+    public function checkout($id)
     {
         $dataForm = [];
         $dataForm['checkout'] = now();
@@ -96,7 +174,7 @@ class ReservationController extends ControllerStandard
             ->with('success', 'Check-Out realizado com sucesso!');
     }
 
-    public function Cancel($id)
+    public function cancel($id)
     {
         $dataForm = [];
         $dataForm['canceled_at'] = now();

@@ -1,4 +1,4 @@
-<table class="table table-hover" id="progress_table">
+<table class="table table-hover" id="rooms_table">
     <thead>
     <tr>
         <th scope="col">Apartamento</th>
@@ -15,7 +15,7 @@
             <tr data-id="{{ $room['id']  }}" id="rooms{{ $room['id'] }}">
                 <td>
                     <input type="hidden"
-                           name="rooms[{{ $room['id']  }}][id]"
+                           name="rooms[{{ $room['id']  }}][room_id]"
                            value="{{ $room['id'] }}">
 
                     <input class="form-control" readonly type="text"
@@ -37,11 +37,8 @@
 
 
                 <td>
-                    <a rel="{{ $room['id'] }}" class="badge bg-yellow" href="javascript:;"
-                       onclick="editDetail(this)">Editar</a>
-
-                    <a rel="{{$room['id'] }}" class="badge bg-danger" href="javascript:;"
-                       onclick="removeDetail(this)">Excluir</a>
+                    <a rel="{{$room['id'] }}" class="btn btn-danger" href="javascript:;"
+                       onclick="removeRoom(this)">Excluir</a>
                 </td>
             </tr>
         @empty
@@ -50,8 +47,6 @@
             </tr>
         @endforelse
     @endif
-
-
     <!-- /.end foreach rooms -->
 
     </tbody>

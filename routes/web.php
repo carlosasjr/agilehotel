@@ -183,15 +183,20 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     /*     * ************************************************ */
+    /*     * *************       ROOMS     ***************** */
+    /*     * ************************************************ */
+    Route::any('rooms/available', 'RoomController@availableRooms');
+    Route::any('rooms/room/{id}', 'RoomController@getRoom');
+
+    /*     * ************************************************ */
     /*     * *************    RESERVATION   ***************** */
     /*     * ************************************************ */
     Route::get('/reservations/{id}/show/{action}', 'ReservationController@showReservation')->name('reservations.showAction');
 
 
-    Route::post('/reservations/{id}/checkin', 'ReservationController@Checkin')->name('reservations.checkin');
-    Route::post('/reservations/{id}/checkout', 'ReservationController@Checkout')->name('reservations.checkout');
-    Route::post('/reservations/{id}/cancel', 'ReservationController@Cancel')->name('reservations.cancel');
-
+    Route::post('/reservations/{id}/checkin', 'ReservationController@checkin')->name('reservations.checkin');
+    Route::post('/reservations/{id}/checkout', 'ReservationController@checkout')->name('reservations.checkout');
+    Route::post('/reservations/{id}/cancel', 'ReservationController@cancel')->name('reservations.cancel');
 
 
     Route::resource('reservations', 'ReservationController');

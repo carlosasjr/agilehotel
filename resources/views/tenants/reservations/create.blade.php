@@ -1,7 +1,13 @@
 @extends('adminlte::page')
 
+@include('tenants.includes.dataTableCss')
+
 @section('css')
+    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="{{ asset('assets/css/default.css') }}">
+    <link rel="stylesheet" href={{ asset('vendor/alertify/css/alertify.core.css') }} />
+    <link rel="stylesheet" href={{ asset('vendor/alertify/css/alertify.default.css') }} />
 @stop
 
 @section('title_postfix', ' - Cadastrar Nova Reserva')
@@ -19,6 +25,12 @@
 
 @section('content')
     @include('tenants.includes.alerts')
+
+    @if( isset($data) )
+        {!! Form::model($data, ['route' => ['reservations.update', $data->id], 'class' => 'form', 'method' => 'put', 'id' => 'formRegister', 'files' => true ]) !!}
+    @else
+        {!! Form::open(['route' => 'reservations.store', 'class' => 'form', 'id' => 'formRegister', 'files' => true]) !!}
+    @endif
 
     <div class="card card-outline card-info">
         <div class="card-header">
@@ -87,13 +99,25 @@
         <!-- /.card-body -->
     </div>
     <!-- /.Rooms -->
+
+
+    {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
+    {!! Form::close() !!}
 @stop
 
+
+
 @section('js')
+    @include('tenants.includes.dataTableJs')
+    <script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
+
+    <script type="text/javascript" src={{ asset('vendor/alertify/js/alertify.min.js') }}></script>
     <script src="{{ url('vendor/jquery/jquery.validate.min.js') }}"></script>
     <script src="{{ url('vendor/jquery/additional-methods.js') }}"></script>
     <script src="{{ url('vendor/jquery/messages_pt_BR.min.js') }}"></script>
     <script src="{{ url('vendor/jquery/jquery.mask.min.js') }}"></script>
+
+
     <script type="text/javascript" src={{ asset('assets/js/reservations/validation.js') }}></script>
 @stop
 
