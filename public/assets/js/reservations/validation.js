@@ -158,7 +158,7 @@ $(document).ready(function () {
                 "data": {
                     "inicio": $('#begin').val(),
                     "fim": $('#end').val(),
-                    'NotIn' : getRoomsAdd()
+                    'added' : getRoomsAdd()
                 }
             },
 

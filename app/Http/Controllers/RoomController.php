@@ -9,30 +9,12 @@ use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {
-    public function availableRooms(Request $request)
+    /**
+     * @param $rooms
+     * @return \Illuminate\Http\JsonResponse
+     */
+    protected function rooms($rooms): \Illuminate\Http\JsonResponse
     {
-        $data = $request->all();
-
-
-        $ex = $data['NotIn'];
-        $datainicio = Helper::formatDateTime($data['inicio'], 'Y-m-d H:i:s');
-        $datafim = Helper::formatDateTime($data['fim'], 'Y-m-d H:i:s');
-
-        $rooms = Room::whereDoesntHave('reservations', function (Builder $query) use ($datainicio, $datafim) {
-
-            $query->where(function ($query) use ($datainicio) { // aqui a abordagem
-                $query->where('begin', '<', $datainicio);
-                $query->orWhere('end', '<', $datainicio);
-            });
-
-            $query->where(function ($query) use ($datafim) { // aqui a abordagem
-                $query->where('begin', '>', $datafim);
-                $query->orWhere('end', '>', $datafim);
-            });
-
-        })->whereNotIn('id', $ex)->get();
-
-
         $arr = [];
         foreach ($rooms as $room) {
 
@@ -48,6 +30,35 @@ class RoomController extends Controller
         $retorno['data'] = $arr;
 
         return response()->json($retorno);
+    }
+
+
+    public function availableRooms(Request $request)
+    {
+        $data = $request->all();
+
+        $added = $data['added'];
+        $begin = Helper::formatDateTime($data['inicio'], 'Y-m-d H:i:s');
+        $end = Helper::formatDateTime($data['fim'], 'Y-m-d H:i:s');
+
+        $rooms = Room::whereDoesntHave('reservations', function (Builder $query) use ($begin, $end) {
+
+            $query->where(function ($query) use ($begin) { // aqui a abordagem
+                $query->where('begin', '<', $begin);
+                $query->orWhere('end', '<', $begin);
+            });
+
+            $query->where(function ($query) use ($end) { // aqui a abordagem
+                $query->where('begin', '>', $end);
+                $query->orWhere('end', '>', $end);
+            });
+
+            $query->where('state', 'Ativa');
+
+        })->whereNotIn('id', $added)->get();
+
+
+        return $this->rooms($rooms);
     }
 
     public function getRoom($id)
@@ -99,4 +110,6 @@ TABELA;
 
         return response()->json($retorno);
     }
+
+
 }
