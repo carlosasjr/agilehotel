@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendConfirmationReservation;
+use App\Models\Room;
 use App\Repositories\Contracts\ReservationRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ReservationController extends ControllerStandard
 {
@@ -190,5 +193,24 @@ class ReservationController extends ControllerStandard
 
         return redirect()->route("{$this->route}.index")
             ->with('success', 'Reserva Cancelada com sucesso!');
+    }
+
+
+    public function confirmation($id)
+    {
+        $data = $this->model->relationships('person')->find($id);
+
+        Mail::to($data->person->email)->send(new SendConfirmationReservation($data));
+
+        return response()->json(['result' => true]);
+    }
+
+    public function  addRoom($id)
+    {
+        $room = Room::find($id);
+
+        $title = "Cadastrar {$this->title}";
+        $people = [];
+        return view("{$this->view}.create", compact('title', 'people', 'room'));
     }
 }

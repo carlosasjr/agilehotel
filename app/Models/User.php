@@ -72,12 +72,12 @@ class User extends Authenticatable
     {
         return [
             'name'      => 'required|min:3|max:100',
-            'fantasy'   => 'required|min:3|max:100',
-            'email'     => "required|min:3|max:100|email|unique:users,email,{$id},id",
+            //'fantasy'   => 'required|min:3|max:100',
+            //'email'     => "required|min:3|max:100|email|unique:users,email,{$id},id",
             'image'     => 'image',
             'cpf'       => 'nullable|cpf|required_if:type,U',
             'password'  => 'required|min:3|max:20|confirmed',
-            'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
+            //'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
         ];
     }
 
@@ -85,11 +85,11 @@ class User extends Authenticatable
     {
         return [
             'name'      => 'required|min:3|max:100',
-            'fantasy'   => 'required|min:3|max:100',
-            'email'     => "required|min:3|max:100|email|unique:users,email,{$id},id",
+            //'fantasy'   => 'required|min:3|max:100',
+            //'email'     => "required|min:3|max:100|email|unique:users,email,{$id},id",
             'image'     => 'image',
             'cpf'       => 'nullable|cpf|required_if:type,U',
-            'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
+            //'marital_status' => 'required|in:Solteiro,Casado,Separado,Divorciado,Viúvo',
         ];
     }
 

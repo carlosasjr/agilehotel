@@ -198,6 +198,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/reservations/{id}/checkout', 'ReservationController@checkout')->name('reservations.checkout');
     Route::post('/reservations/{id}/cancel', 'ReservationController@cancel')->name('reservations.cancel');
 
+    Route::get('/reservations/{id}/confirmation', 'ReservationController@confirmation')->name('reservations.confirmation');
+
+    Route::get('/reservations/room/{id}', 'ReservationController@addRoom')->name('reservations.room');
+
 
     Route::resource('reservations', 'ReservationController');
 });

@@ -2,6 +2,11 @@
 
 @include('tenants.includes.dataTableCss')
 
+@section('css')
+    <link rel="stylesheet" href={{ asset('vendor/alertify/css/alertify.core.css') }} />
+    <link rel="stylesheet" href={{ asset('vendor/alertify/css/alertify.default.css') }} />
+@stop
+
 @section('title_postfix', ' - Reservas')
 
 @section('content_header')
@@ -37,6 +42,9 @@
     <script src="{{ url('vendor/jquery/jquery.min.js') }}"></script>
 
     @include('tenants.includes.dataTableJs')
+
+    <script type="text/javascript" src={{ asset('vendor/alertify/js/alertify.min.js') }}></script>
+    <script type="text/javascript" src={{ asset('assets/js/reservations/reservation.js') }}></script>
 
     <script>
         var urlAjax = '{{ route('reservations.index') }}';

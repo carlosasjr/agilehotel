@@ -1,5 +1,7 @@
 @can('update_reservation')
-    <a href="{{route('reservations.edit', $id)}}" class="badge bg-yellow">Editar</a>
+        @if(empty($canceled_at) && empty($checkout))
+        <a href="{{route('reservations.edit', $id)}}" class="badge bg-yellow">Editar</a>
+    @endif
 @endcan
 
 @can('view_reservation')
@@ -9,6 +11,12 @@
 @can('checkin_reservation')
         @if(empty($checkin) && empty($checkout) && empty($canceled_at))
         <a href="{{route('reservations.showAction', [$id, 'checkin'])}}" class="badge bg-cyan">Check-In</a>
+    @endif
+@endcan
+
+@can('reservation_confirmation')
+    @if(empty($checkin) && empty($checkout) && empty($canceled_at))
+        <a  href="javascript:;"  rel="{{$id}}" class="badge bg-blue" onclick="confirmation(this)">Enviar Confirmação</a>
     @endif
 @endcan
 

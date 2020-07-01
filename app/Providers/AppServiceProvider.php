@@ -25,18 +25,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength('191');
+      
+         Schema::defaultStringLength('191'); 
 
         /**
          * Diretivas
          */
 
-        Blade::if('tenant', function () {
+         Blade::if('tenant', function () {
             return (request()->getHost() != config('tenant.domain_main'));
-        });
+        }); 
 
-        Blade::if('tenantmain', function () {
+         Blade::if('tenantmain', function () {
             return (request()->getHost() == config('tenant.domain_main'));
-        });
+        }); 
     }
 }

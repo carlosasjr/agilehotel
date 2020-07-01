@@ -206,7 +206,7 @@ return [
                 [
                     'text' => 'Reservas',
                     'url' => 'reservations',
-                    'icon' => 'fa fa-bed',
+                    'icon' => 'fas fa-id-card',
                     'label_color' => 'success',
                     'can' => 'reservations'
                 ],
