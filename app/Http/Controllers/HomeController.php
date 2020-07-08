@@ -41,6 +41,7 @@ class HomeController extends Controller
 
 
         $reservation_ocupation = ($room_reservations /  Count(Room::get()) ) * 100;
+        $reservation_ocupation = number_format($reservation_ocupation, 2, ',', '.');
         $people_total = Count( Person::get());
 
         $floors = Floor::with(['rooms.reservations' => function($query) {

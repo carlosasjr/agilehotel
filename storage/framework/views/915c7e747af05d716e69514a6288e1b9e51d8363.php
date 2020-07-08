@@ -94,7 +94,7 @@
 
                                         <div class="card-tools">
                                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                                    class="fas fa-minus"></i>
+                                                    class="fas fa-plus"></i>
                                             </button>
                                         </div>
                                         <!-- /.card-tools -->
