@@ -103,8 +103,8 @@
                                     <div class="card-body">
                                         <?php $__empty_1 = true; $__currentLoopData = $room->reservations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $reservation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                            <p>Hospede: <?php echo e($reservation->person->name); ?></p>
-                                           <p>Data Início: <?php echo e($reservation->begin); ?></p>
-                                           <p>Data Fim: <?php echo e($reservation->end); ?></p>
+                                           <p>Data Início: <?php echo e(\App\Helpers\Helper::formatDateTime($reservation->begin)); ?></p>
+                                           <p>Data Fim: <?php echo e(\App\Helpers\Helper::formatDateTime($reservation->end)); ?></p>
                                             <hr>
                                             <?php echo $__env->make('tenants.reservations.partials.botoes', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 

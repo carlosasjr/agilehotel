@@ -105,8 +105,8 @@
                                     <div class="card-body">
                                         @forelse($room->reservations as $reservation)
                                            <p>Hospede: {{ $reservation->person->name }}</p>
-                                           <p>Data Início: {{ $reservation->begin }}</p>
-                                           <p>Data Fim: {{ $reservation->end }}</p>
+                                           <p>Data Início: {{ \App\Helpers\Helper::formatDateTime($reservation->begin) }}</p>
+                                           <p>Data Fim: {{ \App\Helpers\Helper::formatDateTime($reservation->end) }}</p>
                                             <hr>
                                             @include('tenants.reservations.partials.botoes')
 

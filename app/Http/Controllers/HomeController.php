@@ -56,6 +56,11 @@ class HomeController extends Controller
                 $query->orWhere('end', '>', now());
             });
 
+
+            $query->where(function ($query)  {
+                $query->whereNotIn('state', ['Ativa', 'Checkin']);
+            });
+
         } ])->get();
 
         return view('home', compact('floors', 'reservation_total', 'reservation_canceled', 'people_total',
