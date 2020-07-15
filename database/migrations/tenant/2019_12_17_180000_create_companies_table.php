@@ -20,9 +20,6 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('cellphone');
             $table->string('cpf')->unique();
-            $table->string('oab');
-            $table->string('uf_oab');
-            $table->string('qtd_processes');
             $table->string('email');
             $table->enum('payment_status', ['testing', 'active', 'canceled'])->default('testing');
             $table->string('payment_id');

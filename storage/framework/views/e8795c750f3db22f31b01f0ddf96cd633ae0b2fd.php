@@ -1,2 +1,0 @@
-
-<?php echo $__env->make('adminlte::passwords.reset', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/projects/agile/resources/views/auth/passwords/reset.blade.php ENDPATH**/ ?>

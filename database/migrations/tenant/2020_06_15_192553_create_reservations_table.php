@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->dateTime('end');
             $table->dateTime('checkin')->nullable();
             $table->dateTime('checkout')->nullable();
-            $table->enum('state', ['active', 'canceled'])->default('active');
+            $table->enum('state', ['Ativa', 'Cancelada', 'Checkin', 'Checkout'])->default('Ativa');
             $table->dateTime('canceled_at')->nullable();
             $table->text('observation')->nullable();
 

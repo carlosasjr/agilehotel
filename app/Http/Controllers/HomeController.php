@@ -37,10 +37,17 @@ class HomeController extends Controller
 
         $reservation_total = Count(Reservation::where('state','Ativa')->get());
         $reservation_canceled = Count(Reservation::where('state','Cancelada')->get());
+
         $room_reservations = $this->countRoomOcupation();
 
+        $rooms = Room::get();
 
-        $reservation_ocupation = ($room_reservations /  Count(Room::get()) ) * 100;
+        $reservation_ocupation = 0;
+
+        if (count($rooms) > 0) {
+            $reservation_ocupation = ($room_reservations / Count($rooms)) * 100;
+        }
+
         $reservation_ocupation = number_format($reservation_ocupation, 2, ',', '.');
         $people_total = Count( Person::get());
 
@@ -55,12 +62,6 @@ class HomeController extends Controller
                 $query->where('begin', '>', now());
                 $query->orWhere('end', '>', now());
             });
-
-
-            $query->where(function ($query)  {
-                $query->whereNotIn('state', ['Ativa', 'Checkin']);
-            });
-
         } ])->get();
 
         return view('home', compact('floors', 'reservation_total', 'reservation_canceled', 'people_total',
