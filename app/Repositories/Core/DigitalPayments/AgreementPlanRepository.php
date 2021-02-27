@@ -13,14 +13,6 @@ class AgreementPlanRepository implements AgreementRepositoryInterface
 {
     private $agreement;
 
-    /*     * ************************************************ */
-    /*     * ************* METODOS PRIVADOS ***************** */
-    /*     * ************************************************ */
-
-
-    /*     * ************************************************ */
-    /*     * ************* METODOS PUBLICOS ***************** */
-    /*     * ************************************************ */
 
     public function setAgreement(AgreementRepositoryInterface $agreement)
     {

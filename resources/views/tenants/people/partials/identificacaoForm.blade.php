@@ -14,6 +14,7 @@
         <div class="form-group">
             {!! Form::label('origin_id', 'Origem', ['class' => 'control-label']); !!}
             {!! Form::select('origin_id', $origins ,  null, ['class' => 'form-control', 'id' => 'origin_id']) !!}
+
         </div>
     </div>
 </div>
