@@ -26,8 +26,10 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-      $this->registerPolicies();
+        $this->registerPolicies();
 
+
+        //AuthServiceProvider
         if ($this->app->runningInConsole()) {
             return;
         }
