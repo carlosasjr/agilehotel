@@ -220,6 +220,14 @@ return [
             'icon' => 'fas fa-cogs',
             'submenu' => [
                 [
+                    'text' => 'Andares',
+                    'url' => 'floors',
+                    'icon' => 'fas fa-stream',
+                    'can' => 'floors'
+                ],
+
+
+                [
                     'text' => 'Origem das Pessoas',
                     'url' => 'origins',
                     'icon' => 'fas fa-id-card-alt',

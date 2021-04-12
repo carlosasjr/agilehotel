@@ -9,6 +9,7 @@ use App\Repositories\Contracts\CompanyRepositoryInterface;
 use App\Repositories\Contracts\ContactRepositoryInterface;
 use App\Repositories\Contracts\CountryRepositoryInterface;
 
+use App\Repositories\Contracts\FloorRepositoryInterface;
 use App\Repositories\Contracts\OriginRepositoryInterface;
 use App\Repositories\Contracts\PermissionRepositoryInterface;
 use App\Repositories\Contracts\PersonRepositoryInterface;
@@ -33,6 +34,7 @@ use App\Repositories\Core\Eloquent\Tenant\EloquentCityRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentCompanyRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentContactRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentCountryRepository;
+use App\Repositories\Core\Eloquent\Tenant\EloquentFloorRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentOriginRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentPermissionRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentPersonRepository;
@@ -145,6 +147,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ReservationRepositoryInterface::class,
             EloquentReservationRepository::class
+        );
+
+        $this->app->bind(
+            FloorRepositoryInterface::class,
+                EloquentFloorRepository::class
         );
 
     }

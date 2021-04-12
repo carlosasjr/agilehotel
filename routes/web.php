@@ -188,6 +188,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::any('rooms/available', 'RoomController@availableRooms');
     Route::any('rooms/room/{id}', 'RoomController@getRoom');
 
+
+    /*     * ************************************************ */
+    /*     * *************      FLOORS      ***************** */
+    /*     * ************************************************ */
+    Route::resource('floors', 'FloorController');
+
+
+
     /*     * ************************************************ */
     /*     * *************    RESERVATION   ***************** */
     /*     * ************************************************ */
