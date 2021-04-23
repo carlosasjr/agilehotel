@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Agille Hoteis</title>
     <!-- Plugins CSS -->
-
-
     <link rel="stylesheet" href="{{ asset('assets/landpage/plugins/bootstrap-4.3.1/css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/landpage/plugins/fancybox-master/jquery.fancybox.min.css') }}">
@@ -25,7 +23,6 @@
 
     <link rel="stylesheet" href="{{ asset('assets/landpage/css/settings.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/landpage/css/style.css')}}">
-
 
 </head>
 
@@ -241,6 +238,7 @@
     <!-- Content Section 2 -->
 
     <!-- Video Section -->
+
     <div class="section-padding video-bg" id="video">
         <div class="container">
             <div class="row justify-content-center">
@@ -248,8 +246,7 @@
                     <div class="video-content">
                         <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="video-btn" data-aos="zoom-in" data-aos-duration='1000' data-aos-once="true"><i class="icon icon-triangle-right-17-2"></i></a>
                         <h2 class="title">Conheça nós da Agille Hoteis</h2>
-                        <p>Nossos sistemas são desenvolvidos por analistas de negócios, designers em experiencia do
-                            usuário e desenvolvedores experientes.</p>
+                        <p>Nossos sistemas são desenvolvidos por analistas de negócios, designers em experiencia do usuário e desenvolvedores experientes.</p>
                     </div>
                 </div>
             </div>
@@ -469,17 +466,11 @@
 
 </div>
 
-
-<script src="{{ asset('assets/landpage/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{ asset('vendor/jquery/jquery.js')}}"></script>
 <script src="{{ asset('assets/landpage/plugins/jquery/jquery-migrate.min.js')}}"></script>
 <script src="{{ asset('assets/landpage/plugins/bootstrap-4.3.1/js/bootstrap.bundle.min.js')}}"></script>
-
-
 <script src="{{ asset('assets/landpage/plugins/fancybox-master/jquery.fancybox.min.js')}}"></script>
-
 <script src="{{ asset('assets/landpage/plugins/aos-animation/aos.js')}}"></script>
-
-
 <script src="{{ asset('assets/landpage/js/active.js')}}"></script>
 
 

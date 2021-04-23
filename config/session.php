@@ -153,7 +153,7 @@ return [
     |
     */
 
-    'domain' =>  env('SESSION_DOMAIN', '.softproadv.com.br'),
+    'domain' =>  env('SESSION_DOMAIN', '.agillesystem'),
 
     /*
     |--------------------------------------------------------------------------

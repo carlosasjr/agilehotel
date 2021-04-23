@@ -32,11 +32,12 @@ class AgreementController extends Controller
                              ->with('message', $result['message']);
         }
 
+
+
         $company = $this->company->where('uuid', '=', $companyUuid)->first();
 
 
         $response = $this->agreement->updateCompany($company, $id);
-
 
         if (!$response['status']) {
             return redirect()->back()
@@ -51,9 +52,9 @@ class AgreementController extends Controller
         $success = ($request->success == 'true') ? true : false;
         $token = $request->token;
 
+
         if (!session()->has('company')) {
-            return redirect()->route('index')
-                             ->withErrors( 'Falha de autenticação');
+            return abort(404);
         }
 
         $companySession = session()->get('company');
@@ -61,6 +62,7 @@ class AgreementController extends Controller
         $company = $this->company->where('uuid', '=', $companySession['uuid'])->first();
 
         $site = 'http://' . $company->subdomain . env('APP_SUBDOMAIN');
+
 
 
         if (!$success) {
@@ -85,7 +87,7 @@ class AgreementController extends Controller
 
     public function detailAgreement($id)
     {
-        dd($this->agreement->detailAgreement($id));
+        $this->agreement->detailAgreement($id);
     }
 
 

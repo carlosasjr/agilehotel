@@ -30,8 +30,6 @@ class CreateUsersTable extends Migration
             $table->date('date_admission')->nullable();
             $table->date('date_resignation')->nullable();
 
-            $table->string('ctps')->nullable();
-            $table->string('oab')->nullable();
             $table->string('cellphone')->nullable();
             $table->string('telephone')->nullable();
 

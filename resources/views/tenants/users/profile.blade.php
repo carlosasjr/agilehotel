@@ -58,26 +58,6 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="type">Tipo:</label>
-                {!! Form::select('type', ['A' => 'Advogado', 'U' => 'Usuário'] ,  null, ['class' => 'form-control', 'id' => 'type']) !!}
-            </div>
-
-
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                    <div class="form-group">
-                        {!! Form::text('ctps', null, ['class' => 'form-control', 'placeholder' => 'CTPS:', 'id' => 'ctps']) !!}
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6">
-                    <div class="form-group">
-                        {!! Form::text('oab', null, ['class' => 'form-control', 'placeholder' => 'OAB:', 'id' => 'oab']) !!}
-                    </div>
-                </div>
-            </div>
-
 
             <div class="row">
                 <div class="col-12 col-sm-6">

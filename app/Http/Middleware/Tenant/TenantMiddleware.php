@@ -7,6 +7,7 @@ use App\Models\Company;
 use App\Tenant\ManagerTenant;
 use Carbon\Carbon;
 use Closure;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class TenantMiddleware
 {
@@ -63,7 +64,7 @@ class TenantMiddleware
      */
     private function setConnection($manager, $company): void
     {
-        if (!Helper::in_route('plans') && (!Helper::in_route('paypal'))) {
+          if (!Helper::in_route('plans') && (!Helper::in_route('paypal'))) {
             $manager->setConnection($company);
         }
     }

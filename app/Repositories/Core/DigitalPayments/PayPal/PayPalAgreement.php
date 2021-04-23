@@ -67,7 +67,7 @@ class PayPalAgreement extends PayPal implements AgreementRepositoryInterface
         $startdate = Carbon::now()->add(1, 'day')->toAtomString();
 
         $agreement = new Agreement();
-        $agreement->setName('SoftPro - Contrato de Licença de Uso')
+        $agreement->setName('Agille Hoteis - Contrato de Licença de Uso')
                   ->setDescription('Contrato de Licença de Uso')
                   ->setStartDate($startdate);
 
