@@ -25,26 +25,26 @@ class AgreementController extends Controller
 
     public function createAgreement($companyUuid, $id)
     {
-        $result = $this->agreement->create($id);
+        $agreement = $this->agreement->create($id);
+        $agreement['id'] = $id;
 
-        if (!$result['status']) {
+        if (!$agreement['status']) {
             return redirect()->back()
-                             ->with('message', $result['message']);
+                             ->with('message', $agreement['message']);
         }
-
-
 
         $company = $this->company->where('uuid', '=', $companyUuid)->first();
 
 
-        $response = $this->agreement->updateCompany($company, $id);
+
+        $response = $this->agreement->updateCompany($company, $agreement);
 
         if (!$response['status']) {
             return redirect()->back()
                              ->with('message', $response['message']);
         }
 
-        return redirect()->away($result['url_paypal']);
+        return redirect()->away($agreement['url_paypal']);
     }
 
     public function execute(Request $request)
@@ -52,18 +52,9 @@ class AgreementController extends Controller
         $success = ($request->success == 'true') ? true : false;
         $token = $request->token;
 
-
-        if (!session()->has('company')) {
-            return abort(404);
-        }
-
-        $companySession = session()->get('company');
-
-        $company = $this->company->where('uuid', '=', $companySession['uuid'])->first();
+        $company = $this->company->where('token_payment', '=', $token)->first();
 
         $site = 'http://' . $company->subdomain . env('APP_SUBDOMAIN');
-
-
 
         if (!$success) {
             return redirect()->away($site)

@@ -13,6 +13,7 @@ class Company extends Model
         'cpf',
         'email',
         'payment_status',
+        'token_payment',
         'subdomain',
         'db_database',
         'db_host',

@@ -23,6 +23,7 @@ class CreateCompaniesTable extends Migration
             $table->string('email');
             $table->enum('payment_status', ['testing', 'active', 'canceled'])->default('testing');
             $table->string('payment_id');
+            $table->string('token_payment');
             $table->string('identify');
 
             $table->unsignedBigInteger('plan_id')->nullable();

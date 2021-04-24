@@ -77,7 +77,7 @@ class PayPalAgreement extends PayPal implements AgreementRepositoryInterface
 
         $agreement = $agreement->create($this->apiContext);
 
-        return $agreement->getApprovalLink();
+         return $agreement->getApprovalLink();
     }
 
 
@@ -104,14 +104,16 @@ class PayPalAgreement extends PayPal implements AgreementRepositoryInterface
 
             $url_paypal = $this->agreement($id);
 
+            $token = $this->getTokenPayment($url_paypal);
+
             return [
                 'status'     => true,
                 'url_paypal' => $url_paypal,
-                'identify'   => $this->identify
+                'identify'   => $this->identify,
+                'token'      => $token
             ];
 
         } catch (PayPalConnectionException  $ex) {
-            dd($ex);
             return [
                 'status'    => false,
                 'message'   => $ex->getMessage()
@@ -151,17 +153,28 @@ class PayPalAgreement extends PayPal implements AgreementRepositoryInterface
         return $agreement;
     }
 
-    public function updateCompany(Company $company, $id)
+    public function updateCompany(Company $company, array $agreement)
     {
-        $plan = \App\Models\Plan::where('key_paypal', $id)->first();
+        $plan = \App\Models\Plan::where('key_paypal', $agreement['id'])->first();
 
         $company->identify =  $this->identify;
         $company->plan_id = $plan->id;
+        $company->token_payment = $agreement['token'];
         $company->save();
 
         return [
             'status' => true
         ];
+    }
+
+    /**
+     * @param string $url_paypal
+     * @return mixed|string
+     */
+    private function getTokenPayment(string $url_paypal)
+    {
+        $url = explode('&token=', $url_paypal);
+        return $url[1];
     }
 
 
