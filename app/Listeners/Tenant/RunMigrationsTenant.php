@@ -9,6 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class RunMigrationsTenant
 {
@@ -38,7 +39,7 @@ class RunMigrationsTenant
 
 
         if ($migration === 0) {
-            $senha = uniqid(date('YmdHis'));
+            $senha = Str::random(8);
 
             User::create([
                 'name' => $company->name,
