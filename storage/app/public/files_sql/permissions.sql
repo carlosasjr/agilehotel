@@ -29,7 +29,17 @@ INSERT INTO `permissions` (`id`, `name`, `label`, `created_at`, `updated_at`) VA
    (28, 'create_reservation', 'Criar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
    (29, 'update_reservation', 'Alterar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
    (30, 'view_reservation', 'Visualizar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
-   (31, 'delete_reservation', 'Deletar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06');
+   (31, 'delete_reservation', 'Deletar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (32, 'floors', 'Menu de Andares', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (33, 'create_floor', 'Criar um andar', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (34, 'update_floor', 'Alterar um andar', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (35, 'view_floor', 'Visualizar um andar', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (36, 'delete_floor', 'Deletar um andar', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (37, 'origins', 'Menu de Origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (38, 'create_origin', 'Criar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (39, 'update_origin', 'Alterar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (40, 'view_origin', 'Deletar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (41, 'delete_origin', 'Deletar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
 
 
 
