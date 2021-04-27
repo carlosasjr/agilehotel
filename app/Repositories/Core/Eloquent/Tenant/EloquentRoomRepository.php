@@ -2,8 +2,8 @@
 namespace App\Repositories\Core\Eloquent\Tenant;
 
 
-use App\Models\Floor;
-use App\Repositories\Contracts\FloorRepositoryInterface;
+use App\Models\Room;
+use App\Repositories\Contracts\RoomRepositoryInterface;
 use App\Repositories\Core\BaseEloquentRepository;
 
 /**
@@ -11,8 +11,8 @@ use App\Repositories\Core\BaseEloquentRepository;
  *
  * @copyright (c) 2018, Carlos Junior
  */
-class EloquentFloorRepository extends BaseEloquentRepository
-    implements FloorRepositoryInterface
+class EloquentRoomRepository extends BaseEloquentRepository
+    implements RoomRepositoryInterface
 {
     /*     * ************************************************ */
     /*     * ************* METODOS PRIVADOS ***************** */
@@ -24,11 +24,18 @@ class EloquentFloorRepository extends BaseEloquentRepository
     /*     * ************************************************ */
     public function model()
     {
-        return Floor::class;
+        return Room::class;
     }
 
-    public function getFloors()
+    public function dataTables($column, $view)
     {
-        return $this->model->get()->pluck('number', 'id');
+        $model = $this->model
+            ->query()
+            ->with(['category', 'floor']);
+
+
+        return Datatables()->eloquent($model)
+            ->addColumn($column, $view)
+            ->make(true);
     }
 }

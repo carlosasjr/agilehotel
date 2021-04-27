@@ -1,18 +1,18 @@
 <?php
 namespace App\Repositories\Core\Eloquent\Tenant;
 
-
-use App\Models\Floor;
-use App\Repositories\Contracts\FloorRepositoryInterface;
+use App\Models\Category;
+use App\Repositories\Contracts\CategoryRepositoryInterface;
 use App\Repositories\Core\BaseEloquentRepository;
+
 
 /**
  * .class [ TIPO ]
  *
  * @copyright (c) 2018, Carlos Junior
  */
-class EloquentFloorRepository extends BaseEloquentRepository
-    implements FloorRepositoryInterface
+class EloquentCategoryRepository extends BaseEloquentRepository
+    implements CategoryRepositoryInterface
 {
     /*     * ************************************************ */
     /*     * ************* METODOS PRIVADOS ***************** */
@@ -24,11 +24,11 @@ class EloquentFloorRepository extends BaseEloquentRepository
     /*     * ************************************************ */
     public function model()
     {
-        return Floor::class;
+        return  Category::class;
     }
 
-    public function getFloors()
+    public function getCategories()
     {
-        return $this->model->get()->pluck('number', 'id');
+        return $this->model->get()->pluck('description', 'id');
     }
 }

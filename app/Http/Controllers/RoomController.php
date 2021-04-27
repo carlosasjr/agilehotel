@@ -4,11 +4,71 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Helper;
 use App\Models\Room;
+use App\Repositories\Contracts\CategoryRepositoryInterface;
+use App\Repositories\Contracts\FloorRepositoryInterface;
+use App\Repositories\Contracts\RoomRepositoryInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class RoomController extends ControllerStandard
 {
+    private $category;
+    private $floor;
+
+    public function __construct(RoomRepositoryInterface $rooms,
+                                CategoryRepositoryInterface $category,
+                                FloorRepositoryInterface $floor
+
+    )
+    {
+        $this->model = $rooms;
+        $this->title = 'Quartos';
+        $this->view = 'tenants.rooms';
+        $this->route = 'rooms';
+        $this->category = $category;
+        $this->floor = $floor;
+
+      /*  $this->middleware('can:rooms');
+
+        $this->middleware('can:create_origin')->only(['create', 'store']);
+        $this->middleware('can:update_origin')->only(['edit', 'update']);
+        $this->middleware('can:view_origin')->only(['show']);
+        $this->middleware('can:delete_origin')->only(['delete']);*/
+    }
+
+    public function index()
+    {
+        if (request()->ajax()) {
+            return $this->model
+                ->dataTables('action', $this->view . '.partials.acoes');
+        }
+
+        $title = "Gestão de {$this->title}s";
+        return view("{$this->view}.index", compact('title'));
+    }
+
+    public function create()
+    {
+        $categories = $this->category->getCategories();
+        $floors = $this->floor->getFloors();
+
+        $title = "Cadastrar {$this->title}";
+        return view("{$this->view}.create", compact('title', 'categories', 'floors'));
+    }
+
+    public function edit($id)
+    {
+        $data = $this->model->find($id);
+
+        $categories = $this->category->getCategories();
+        $floors = $this->floor->getFloors();
+
+        $title = "Editar {$this->title}: {$data->name}";
+
+        return view("{$this->view}.create", compact('title', 'data', 'categories', 'floors'));
+    }
+
+
     /**
      * @param $rooms
      * @return \Illuminate\Http\JsonResponse

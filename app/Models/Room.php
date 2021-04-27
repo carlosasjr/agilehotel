@@ -6,6 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
+    protected $fillable = ['category_id', 'floor_id', 'number', 'description'];
+
+    public function rules($id = '')
+    {
+        return [
+            'category_id'   => 'required|exists:categories,id',
+            'floor_id'      => 'required|exists:floors,id',
+            'number'        => "required|unique:rooms,number,{$id},id",
+            'description'   => "required|unique:rooms,description,{$id},id",
+        ];
+    }
+
     public function reservations()
     {
         return $this->belongsToMany(Reservation::class, 'reservation_room');

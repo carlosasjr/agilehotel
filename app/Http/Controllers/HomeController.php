@@ -35,6 +35,7 @@ class HomeController extends Controller
     public function index()
     {
 
+
         $reservation_total = Count(Reservation::where('state','Ativa')->get());
         $reservation_canceled = Count(Reservation::where('state','Cancelada')->get());
 
@@ -51,8 +52,9 @@ class HomeController extends Controller
         $reservation_ocupation = number_format($reservation_ocupation, 2, ',', '.');
         $people_total = Count( Person::get());
 
-        $floors = Floor::with(['rooms.reservations' => function($query) {
 
+
+        $floors = Floor::with(['rooms.reservations' => function($query) {
             $query->where(function ($query) {
                 $query->where('begin', '<', now());
                 $query->orWhere('end', '<', now());
@@ -63,6 +65,8 @@ class HomeController extends Controller
                 $query->orWhere('end', '>', now());
             });
         } ])->get();
+
+
 
         return view('home', compact('floors', 'reservation_total', 'reservation_canceled', 'people_total',
         'reservation_ocupation'));

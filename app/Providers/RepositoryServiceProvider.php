@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Repositories\Contracts\AddressRepositoryInterface;
 use App\Repositories\Contracts\AgreementRepositoryInterface;
+use App\Repositories\Contracts\CategoryRepositoryInterface;
 use App\Repositories\Contracts\CityRepositoryInterface;
 use App\Repositories\Contracts\CompanyRepositoryInterface;
 use App\Repositories\Contracts\ContactRepositoryInterface;
@@ -19,6 +20,7 @@ use App\Repositories\Contracts\PlanRepositoryInterface;
 use App\Repositories\Contracts\ProfileRepositoryInterface;
 
 use App\Repositories\Contracts\ReservationRepositoryInterface;
+use App\Repositories\Contracts\RoomRepositoryInterface;
 use App\Repositories\Contracts\StateRepositoryInterface;
 
 use App\Repositories\Contracts\SubscriptionRepositoryInterface;
@@ -30,6 +32,7 @@ use App\Repositories\Core\DigitalPayments\AgreementPlanRepository;
 use App\Repositories\Core\DigitalPayments\SubscriptionPlanRepository;
 
 use App\Repositories\Core\Eloquent\Tenant\EloquentAddressRepository;
+use App\Repositories\Core\Eloquent\Tenant\EloquentCategoryRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentCityRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentCompanyRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentContactRepository;
@@ -42,6 +45,7 @@ use App\Repositories\Core\Eloquent\Tenant\EloquentPersonRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentPlanRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentProfileRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentReservationRepository;
+use App\Repositories\Core\Eloquent\Tenant\EloquentRoomRepository;
 use App\Repositories\Core\Eloquent\Tenant\EloquentStateRepository;
 
 use App\Repositories\Core\Eloquent\Tenant\EloquentTypeAddressRepository;
@@ -152,6 +156,16 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             FloorRepositoryInterface::class,
                 EloquentFloorRepository::class
+        );
+
+        $this->app->bind(
+            CategoryRepositoryInterface::class,
+            EloquentCategoryRepository::class
+        );
+
+        $this->app->bind(
+            RoomRepositoryInterface::class,
+            EloquentRoomRepository::class
         );
 
     }

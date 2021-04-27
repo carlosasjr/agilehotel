@@ -206,7 +206,7 @@ return [
                 [
                     'text' => 'Reservas',
                     'url' => 'reservations',
-                    'icon' => 'fas fa-id-card',
+                    'icon' => 'fas fa-hotel',
                     'label_color' => 'success',
                     'can' => 'reservations'
                 ],
@@ -220,11 +220,25 @@ return [
             'icon' => 'fas fa-cogs',
             'submenu' => [
                 [
+                    'text' => 'Categorias',
+                    'url' => 'categories',
+                    'icon' => 'fas fa-project-diagram',
+                ],
+
+
+                [
                     'text' => 'Andares',
                     'url' => 'floors',
                     'icon' => 'fas fa-stream',
                     'can' => 'floors'
                 ],
+
+                [
+                    'text' => 'Quartos',
+                    'url' => 'rooms',
+                    'icon' => 'fas fa-bed',
+                ],
+
 
 
                 [
