@@ -25,3 +25,8 @@ INSERT INTO `permission_profile` (`id`, `permission_id`, `profile_id`) VALUES
 	(24, 24, 2),
 	(25, 25, 2),
 	(26, 26, 2);
+	(27, 27, 2);
+	(28, 28, 2);
+	(29, 29, 2);
+	(30, 30, 2);
+	(31, 31, 2);

@@ -24,7 +24,12 @@ INSERT INTO `permissions` (`id`, `name`, `label`, `created_at`, `updated_at`) VA
    (23, 'view_person', 'Visualizar Pessoas', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
    (24, 'delete_person', 'Deletar Pessoas', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
    (25, 'companies', 'Menu de Empresa', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
-   (26, 'plans', 'Menu de Planos', '2020-01-31 17:19:06', '2020-01-31 17:19:06');
+   (26, 'plans', 'Menu de Planos', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (27, 'reservations', 'Menu de Reservas', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (28, 'create_reservation', 'Criar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (29, 'update_reservation', 'Alterar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (30, 'view_reservation', 'Visualizar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (31, 'delete_reservation', 'Deletar uma reserva', '2020-01-31 17:19:06', '2020-01-31 17:19:06');
 
 
 
