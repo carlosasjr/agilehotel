@@ -39,7 +39,7 @@ INSERT INTO `permissions` (`id`, `name`, `label`, `created_at`, `updated_at`) VA
    (38, 'create_origin', 'Criar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
    (39, 'update_origin', 'Alterar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
    (40, 'view_origin', 'Deletar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
-   (41, 'delete_origin', 'Deletar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06'),
+   (41, 'delete_origin', 'Deletar uma origem', '2020-01-31 17:19:06', '2020-01-31 17:19:06');
 
 
 
