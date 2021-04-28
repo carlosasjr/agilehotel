@@ -245,7 +245,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10">
                     <div class="video-content">
-                        <a data-fancybox href="http://youtu.be/tt2k8PGm-TI" class="video-btn" data-aos="zoom-in" data-aos-duration='1000' data-aos-once="true"><i class="icon icon-triangle-right-17-2"></i></a>
+                        <a data-fancybox href="https://www.youtube.com/watch?v=OQ7pLUIk4GM" class="video-btn" data-aos="zoom-in" data-aos-duration='1000' data-aos-once="false"><i class="icon icon-triangle-right-17-2"></i></a>
                         <h2 class="title">Conheça nós da Agille Hoteis</h2>
                         <p>Nossos sistemas são desenvolvidos por analistas de negócios, designers em experiencia do usuário e desenvolvedores experientes.</p>
                     </div>
