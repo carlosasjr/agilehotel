@@ -72,7 +72,7 @@
             <div class="col-md-12">
                 <div class="card card-success collapsed-card">
                     <div class="card-header">
-                        <h3 class="card-title"><strong>{{ $floor->number}}</strong>º Andar</h3>
+                        <h3 class="card-title"><strong>{{ $floor->number}}</strong>Andar</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
@@ -86,9 +86,8 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body d-flex" style="display: block;">
-
                         @foreach($floor->rooms as $room)
-                            <div class="col-md-3">
+                            <div class="col-3">
                                 <div
                                     class="card  {{ (count($room->reservations) > 0)  ? 'card-danger'  : 'card-success' }} ">
                                     <div class="card-header">
