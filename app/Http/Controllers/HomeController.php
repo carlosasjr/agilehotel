@@ -27,15 +27,14 @@ class HomeController extends Controller
                 $query->orWhere('end', '>', now());
             });
 
-            $query->where('state', 'Ativa');
+            $query->where('state', 'Ativa')
+                    ->orWhere('state', 'Checkin');
 
         })->get());
     }
 
     public function index()
     {
-
-
         $reservation_total = Count(Reservation::where('state','Ativa')->get());
         $reservation_canceled = Count(Reservation::where('state','Cancelada')->get());
 
