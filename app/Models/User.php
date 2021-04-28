@@ -209,10 +209,4 @@ class User extends Authenticatable
     {
         return Helper::formatDecimal($value);
     }
-
-
-    public function scopeAdvogados($query)
-    {
-        return $query->where('type', '=', 'A');
-    }
 }

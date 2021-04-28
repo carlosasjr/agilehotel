@@ -88,7 +88,7 @@
                     <div class="card-body d-flex" style="display: block;">
 
                         @foreach($floor->rooms as $room)
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div
                                     class="card  {{ (count($room->reservations) > 0)  ? 'card-danger'  : 'card-success' }} ">
                                     <div class="card-header">

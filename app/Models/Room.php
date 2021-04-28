@@ -14,7 +14,7 @@ class Room extends Model
             'category_id'   => 'required|exists:categories,id',
             'floor_id'      => 'required|exists:floors,id',
             'number'        => "required|unique:rooms,number,{$id},id",
-            'description'   => "required|unique:rooms,description,{$id},id",
+            'description'   => "required",
         ];
     }
 
