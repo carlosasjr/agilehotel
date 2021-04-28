@@ -16,14 +16,12 @@
     @include('tenants.includes.alerts')
 
     <div class="content">
-       @can('create_state')
         <p>
             <a href="{{route('rooms.create')}}" class="btn btn-primary">
                 <span class="glyphicon glyphicon-plus"></span>
                 Adicionar
             </a>
         </p>
-        @endcan
 
         <!--TABELA -->
             @include('tenants.rooms.partials.table')
