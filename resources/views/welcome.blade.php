@@ -441,8 +441,8 @@
                     </div>
                     <div class="col-lg-4 offset-lg-1 col-md-5 col-sm-7 order-md-2 mb--10">
                         <ul class="footer-list list-inline">
-                            <li><a href="">Política de Privacidade</a></li>
-                            <li><a href="">Termo e Condições de Uso</a></li>
+                            <li><a href="https://drive.google.com/file/d/1N2ItVi5xBqT8Dnhp6FpD3ckFBdyfNhID/view?usp=sharing">Política de Privacidade</a></li>
+                            <li><a href="https://docs.google.com/document/d/1yDQUb-3l3YbapYuryXslXl6NrqLUh65NxKjpdmcoDCg">Termo e Condições de Uso</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5 order-md-1  mb--10">
