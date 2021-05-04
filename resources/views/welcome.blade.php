@@ -140,7 +140,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8 col-md-10">
                     <div class="hero-content">
-                        <h1 class="title h2">Quer ter um software de gestão hoteleira na palma da sua mão?
+                        <h1 class="title h2">Quer ter um software de gestão hoteleira na palma da sua mão?<br>
                             Conheça a Agille Hotéis!</h1>
                         <p>Planejamento e controle dos hóspedes, administração de recursos,
                             gestão financeira e muito mais em uma única plataforma!</p>
