@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Agille Hoteis</title>
+    <title>Agille Hotéis</title>
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="{{ asset('assets/landpage/plugins/bootstrap-4.3.1/css/bootstrap.min.css') }}">
 
@@ -49,7 +49,7 @@
                 <div class="col">
                     <!-- Brand Logo -->
                     <div class="brand-logo">
-                        <a href=""><img src="{{ asset('assets/landpage/image/Agille-hotel.png')}}" alt=""/></a>
+                        <a href=""><img src="{{ asset('assets/landpage/image/Logo_Hoteis_Sem_Fundo.png')}}" alt=""/></a>
                     </div>
                 </div>
                 <!-- Menu Block -->
@@ -140,9 +140,9 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8 col-md-10">
                     <div class="hero-content">
-                        <h1 class="title h2">Quer ter a gestão do seu hotel na palma da sua mão?
-                            Conheça a AGILLE HOTEIS!</h1>
-                        <p>Planejamento e controle dos hospedes, administração de recursos,
+                        <h1 class="title h2">Quer ter um software de gestão hoteleira na palma da sua mão?
+                            Conheça a Agille Hotéis!</h1>
+                        <p>Planejamento e controle dos hóspedes, administração de recursos,
                             gestão financeira e muito mais em uma única plataforma!</p>
 
                     </div>
@@ -184,7 +184,7 @@
                         </div>
                         <div class="widget__body divider--right">
                             <h3 class="widget__heading h6">Grid de Disponibilidade</h3>
-                            <p>Tenha acesso a todos os quartos separados por andar, ocupados e vagos.</p>
+                            <p>Tenha acesso a todos os quartos separados por andar, ocupados e disponíveis.</p>
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                         <div class="widget__body">
                             <h3 class="widget__heading h6">Gestão Financeira</h3>
                             <p>Tenha em mãos todas as informações para uma Gestão Financeira completa, rápida e
-                                estratégica..</p>
+                                estratégica.</p>
                         </div>
                     </div>
                 </div>
@@ -246,8 +246,8 @@
                 <div class="col-xl-8 col-lg-10">
                     <div class="video-content">
                         <a data-fancybox href="https://www.youtube.com/watch?v=OQ7pLUIk4GM" class="video-btn" data-aos="zoom-in" data-aos-duration='1000' data-aos-once="false"><i class="icon icon-triangle-right-17-2"></i></a>
-                        <h2 class="title">Conheça nós da Agille Hoteis</h2>
-                        <p>Nossos sistemas são desenvolvidos por analistas de negócios, designers em experiencia do usuário e desenvolvedores experientes.</p>
+                        <h2 class="title">Conheça o sistema de gestão hoteleira <b>Agille Hotéis</b></h2>
+                        <p>Nossos sistemas são desenvolvidos por analistas de negócios, designers em experiência do usuário e desenvolvedores experientes.</p>
                     </div>
                 </div>
             </div>
@@ -281,7 +281,7 @@
 
 
                     <div class="form-group">
-                        {!! Form::text('cpf', null, ['id' => 'cpf', 'class' => 'form-control', 'placeholder' => 'CPF (apenas numeros)']) !!}
+                        {!! Form::text('cpf', null, ['id' => 'cpf', 'class' => 'form-control', 'placeholder' => 'CPF (apenas números)']) !!}
                     </div>
 
 
@@ -290,11 +290,11 @@
                     </div>
 
                     <div class="form-group">
-                        {!! Form::text('email_confirmation', null, ['class' => 'form-control', 'placeholder' => 'Repita o email']) !!}
+                        {!! Form::text('email_confirmation', null, ['class' => 'form-control', 'placeholder' => 'Repita o e-mail']) !!}
                     </div>
 
                     <div class="form-group">
-                        {!! Form::label('subdomain', 'Crie um endereço exclusivo para sua empresa acessar o Agille Hotel', ['class' => 'control-label']); !!}
+                        {!! Form::label('subdomain', 'Crie um endereço exclusivo para sua empresa acessar o Agille Hotéis.', ['class' => 'control-label']); !!}
                         <div class="input-group">
                             {!! Form::text('subdomain', null, ['class' => 'form-control', 'placeholder' => 'SubDomínio']) !!}
 
@@ -349,7 +349,7 @@
                             </div>
                             <div class="content">
                                 <h5 class="title">Anderson Silva</h5>
-                                <span>Gerente Dafiti Hotel</span>
+                                <span>Gerente do Dafiti Hotel</span>
                             </div>
                         </div>
                     </div>
@@ -367,7 +367,7 @@
                             </div>
                             <div class="content">
                                 <h5 class="title">Cristine Cardoso</h5>
-                                <span>Analista de Sistema Kahoot Hotel</span>
+                                <span>Analista de Sistema do Kahoot Hotel</span>
                             </div>
                         </div>
                     </div>
@@ -385,7 +385,7 @@
                             </div>
                             <div class="content">
                                 <h5 class="title">Carlos Bruno</h5>
-                                <span>Supervisor Jr Sereia Hoteis</span>
+                                <span>Gerente do Sereia Hoteis</span>
                             </div>
                         </div>
                     </div>
@@ -441,13 +441,12 @@
                     </div>
                     <div class="col-lg-4 offset-lg-1 col-md-5 col-sm-7 order-md-2 mb--10">
                         <ul class="footer-list list-inline">
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">Terms & Conditions</a></li>
-                            <li><a href="">Site map</a></li>
+                            <li><a href="">Política de Privacidade</a></li>
+                            <li><a href="">Termo e Condições de Uso</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5 order-md-1  mb--10">
-                        <p class="mb-0">© 2020 Agille Systems. All rights reserved</p>
+                        <p class="mb-0">© 2021 Agille Systems. Todos os direitos reservados.</p>
                     </div>
 
                 </div>
