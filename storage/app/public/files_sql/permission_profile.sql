@@ -39,4 +39,9 @@ INSERT INTO `permission_profile` (`id`, `permission_id`, `profile_id`) VALUES
 	(38, 38, 2),
 	(39, 39, 2),
 	(40, 40, 2),
-	(41, 41, 2);
+	(41, 41, 2),
+	(42, 42, 2),
+	(43, 43, 2),
+	(44, 44, 2),
+	(45, 45, 2);
+
