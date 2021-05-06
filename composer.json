@@ -1,4 +1,5 @@
-{
++
+'   J'{
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
@@ -19,7 +20,10 @@
         "paypal/rest-api-sdk-php": "^1.14",
         "yajra/laravel-datatables-oracle": "^9.7"
     },
-    "require-dev": {
+    "require-dev": {/
+        [
+
+        ]
         "barryvdh/laravel-debugbar": "^3.2",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",

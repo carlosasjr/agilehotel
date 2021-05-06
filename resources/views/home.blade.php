@@ -79,8 +79,6 @@
                                     class="fas fa-expand"></i></button>
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                                     class="fas fa-plus"></i></button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                    class="fas fa-times"></i></button>
                         </div>
                         <!-- /.card-tools -->
                     </div>
@@ -90,7 +88,7 @@
                         @foreach($floor->rooms as $room)
                             <div class="col-md-3">
                                 <div
-                                    class="card  {{ (count($room->reservations) > 0)  ? 'card-danger'  : 'card-success' }} ">
+                                    class="card {{ $room->color }}">
                                     <div class="card-header">
                                         <h3 class="card-title">Apto. <strong>{{ $room->number }}</strong></h3>
 
