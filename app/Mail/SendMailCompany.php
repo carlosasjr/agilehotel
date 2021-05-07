@@ -35,6 +35,7 @@ class SendMailCompany extends Mailable
     public function build()
     {
         return $this->view('tenants.companies.mail.bemvindo')
+                    ->subject('Registro - Agille Hotéis')
                     ->with([
                         'company' => $this->company,
                         'senha' => $this->senha
