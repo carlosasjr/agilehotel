@@ -168,7 +168,7 @@
     text-decoration: none;" href="http://{{ $company->subdomain ?? 'teste'}}{{env('APP_SUBDOMAIN') }}">http://{{ $company->subdomain ?? 'teste' }}{{ env('APP_SUBDOMAIN') }}</a>
                                                                 </span><br/>
                                                         <br/>
-                                                        <span style="font-size:24px;">Suas informações foram gravadas e o Agille Hotel está pronto para seu negócio!<br/>
+                                                        <span style="font-size:24px;">Suas informações foram gravadas e o Agille Hotéis está pronto para seu negócio!<br/>
                                                                <p>Basta acessar o domínio escolhido no momento do seu cadastro, e identificar-se com seu usuário e senha que enviamos para o seu e-mail</p></span>
                                                         <br/><br/>
 
@@ -190,12 +190,6 @@
                     </td>
                 </tr>
             </table>
-            <table width="640" border="0" cellspacing="0" cellpadding="20" bgcolor="#2a8e9d" class="100p">
-                <tr>
-                    <td align="center" style="font-size:24px; color:#FFFFFF;"><font face="'Roboto', Arial, sans-serif"><a href="http:\\www.agillehotel.com.br">www.agillehotel.com.br</a></font></td>
-                </tr>
-            </table>
-
 
             <table width="640" border="0" cellspacing="0" cellpadding="0" bgcolor="#b2d6db" class="100p" height="1">
                 <tr>
