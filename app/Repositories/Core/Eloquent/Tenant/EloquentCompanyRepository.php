@@ -53,7 +53,7 @@ class EloquentCompanyRepository extends BaseEloquentRepository
 
             return $company;
         } catch (\Exception $e) {
-            DB::rollBack();
+           DB::rollBack();
 
             redirect()->back()
                       ->withErrors('Erro ao criar a empresa: ' . $e->getMessage());
